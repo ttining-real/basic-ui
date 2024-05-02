@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+  /* font-family: "Pretendard Variable", sans-serif; */
+  /* font-family: 'SUIT Variable', sans-serif; */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 헤더 */
+.header {
+  width: 940px;
+  margin: auto;
+  background-color: yellow;
+}
+
+/* 비주얼 */
+.visual {
+  inline-size: 940px;
+  margin: auto;
+  background-color: pink;
+}
+
+/* 메인 */
+.main {
+  background-color: skyblue;
+}
+
+/* 슬로건 */
+.slogan {
+  background-color: lime;
+}
+
+/* 푸터 */
+.footer {
+  background-color: orange;
+}
