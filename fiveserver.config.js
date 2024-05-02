@@ -5,4 +5,5 @@ module.exports = {
   host: "localhost",
   browser: "chrome",
   https: false,
+  // https: true,
 };
