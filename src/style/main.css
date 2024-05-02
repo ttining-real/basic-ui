@@ -1,22 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
+/* root = html (제일 최상위) */
+/* : > 유사 클래스, 유사 요소라고 함. (예약어) */
+:root {
+  --container-size: 940px;
+}
+
 body {
   /* font-family: "Pretendard Variable", sans-serif; */
   /* font-family: 'SUIT Variable', sans-serif; */
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+.header,
+.visual,
+.main,
+.slogan,
+.footer {
+  /* width: 940px; */
+  width: var(--container-size, 940px);
+  margin: 0 auto;
+}
+/* 그룹핑 방식보다 더 편한 방법이 있을까... => 변수 사용 */
+/* 이제는 CSS에서도 변수 사용 가능! */
+
 /* 헤더 */
 .header {
-  width: 940px;
-  margin: auto;
   background-color: yellow;
 }
 
 /* 비주얼 */
 .visual {
-  inline-size: 940px;
-  margin: auto;
   background-color: pink;
 }
 
