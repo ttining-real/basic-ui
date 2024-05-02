@@ -31,9 +31,9 @@
   <main class="main">
     <!-- 메인 영역입니다. -->
     <!-- div.group${그룹$}*3 -->
-    <div class="group1">그룹1</div>
-    <div class="group2">그룹2</div>
-    <div class="group3">그룹3</div>
+    <div class="group group1">그룹1</div>
+    <div class="group group2">그룹2</div>
+    <div class="group group3">그룹3</div>
   </main>
 
   <!-- div role="article" -->
@@ -43,6 +43,13 @@
   </article>
 
   <!-- div role="contentinfo" -->
-  <footer class="footer">푸터 영역입니다.</footer>
+  <!-- inner 박스를 해도 되고 outer 박스를 해도 됨. 효율의 차이는 없음. -->
+  <!-- 슬비쌤은 inner 박스를 자주 쓴다고 함. -->
+  <footer class="footer">
+    <div class="footer-inner">
+      푸터 영역입니다.
+      앙냥냥
+    </div>
+  </footer>
 </body>
 </html>

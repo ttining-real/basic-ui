@@ -16,7 +16,7 @@ body {
 .visual,
 .main,
 .slogan,
-.footer {
+.footer-inner {
   /* width: 940px; */
   width: var(--container-size, 940px);
   margin: 0 auto;
@@ -27,24 +27,47 @@ body {
 /* 헤더 */
 .header {
   background-color: yellow;
+  height: 10vh;
 }
 
 /* 비주얼 */
 .visual {
   background-color: pink;
+  height: 10vh;
 }
 
 /* 메인 */
 .main {
+  /*화면에 어떤 방식으로 렌더링해줄 것이냐라는 것을 결정해주는 속성*/
+  /* display: flex를 주면 flex-container가 됨. */
+  display: flex;
+  /* flex흐름, direction 속성과 wrap(줄바꿈을 허용할 수 있는) 속성을 같이 사용할 수 있음 */
+  flex-flow: row nowrap;
+  /* flex-container에만 적용되는 속성 */
+  /* justify-content, align-items */
+  justify-content: flex-start; /* 메인축의 정렬을 담당 */
+  align-items: stretch; /* 교차축의 정렬을 담당 */
   background-color: skyblue;
+  height: 60vh;
+}
+
+.group{
+  /* 부모가 flex-container가 되었ㅊ응게 */
+  /* .group들은 flex-items가 된다잉. */
+  border: 3px solid red;
 }
 
 /* 슬로건 */
 .slogan {
   background-color: lime;
+  height: 10vh;
 }
 
 /* 푸터 */
 .footer {
   background-color: orange;
+}
+.footer-inner{
+  background-color: yellow;
+  height: 10vh;
 }
