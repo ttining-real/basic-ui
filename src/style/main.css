@@ -1,16 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-/* root = html (제일 최상위) */
-/* : > 유사 클래스, 유사 요소라고 함. (예약어) */
 :root {
   --container-size: 940px;
 }
 
 body {
-  /* font-family: "Pretendard Variable", sans-serif; */
-  /* font-family: 'SUIT Variable', sans-serif; */
   font-family: 'Noto Sans KR', sans-serif;
-  background: lightgray;
 }
 
 .header,
@@ -18,12 +13,9 @@ body {
 .main,
 .slogan,
 .footer-inner {
-  /* width: 940px; */
   width: var(--container-size, 940px);
   margin: 0 auto;
 }
-/* 그룹핑 방식보다 더 편한 방법이 있을까... => 변수 사용 */
-/* 이제는 CSS에서도 변수 사용 가능! */
 
 /* 헤더 */
 .header {
@@ -40,41 +32,41 @@ body {
 
 /* 메인 */
 .main {
-  /*화면에 어떤 방식으로 렌더링해줄 것이냐라는 것을 결정해주는 속성*/
-  background-color: #fff;
-  height: 60vh;
-  /* display: flex를 주면 flex-container가 됨. */
-  display: flex;
-  /* flex흐름, direction 속성과 wrap(줄바꿈을 허용할 수 있는) 속성을 같이 사용할 수 있음 */
-  flex-flow: row nowrap;
-  /* flex-container에만 적용되는 속성 */
-  /* justify-content : 메인축의 정렬을 담당, align-items : 교차축의 정렬을 담당 */
-  justify-content: space-between;
-  align-items: stretch;
-  padding: 28px 16px 36px;
+  background-color: skyblue;
+  display: flow-root; /* 모던 방식 */
+  min-height: 450px;
+  padding: 0 15px;
 }
 
 .group {
-  /* 부모가 flex-container가 되었ㅊ응게 .group들은 flex-items가 된다잉. */
   border: 3px solid red;
+  margin: 0 15px;
 }
 
-.group1 {
+/* .main .group:nth-child(-n+2){
+  margin-right: 60px;
+} */
+
+.group:nth-child(1) {
   width: 250px;
+  float: left;
+  background: orange;
 }
-.group2 {
+.group:nth-child(2) {
   width: 380px;
-  order: -1;
+  background: silver;
+  float: left;
 }
-.group3 {
+.group:nth-child(3) {
   width: 190px;
-  order: -1;
+  float: left;
 }
 
 /* 슬로건 */
 .slogan {
   background-color: lime;
   height: 10vh;
+  clear: both;
 }
 
 /* 푸터 */
