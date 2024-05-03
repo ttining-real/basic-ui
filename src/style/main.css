@@ -10,6 +10,7 @@ body {
   /* font-family: "Pretendard Variable", sans-serif; */
   /* font-family: 'SUIT Variable', sans-serif; */
   font-family: 'Noto Sans KR', sans-serif;
+  background: lightgray;
 }
 
 .header,
@@ -28,6 +29,7 @@ body {
 .header {
   background-color: yellow;
   height: 10vh;
+  padding: 0 50px;
 }
 
 /* 비주얼 */
@@ -39,22 +41,34 @@ body {
 /* 메인 */
 .main {
   /*화면에 어떤 방식으로 렌더링해줄 것이냐라는 것을 결정해주는 속성*/
+  background-color: #fff;
+  height: 60vh;
   /* display: flex를 주면 flex-container가 됨. */
   display: flex;
   /* flex흐름, direction 속성과 wrap(줄바꿈을 허용할 수 있는) 속성을 같이 사용할 수 있음 */
   flex-flow: row nowrap;
   /* flex-container에만 적용되는 속성 */
-  /* justify-content, align-items */
-  justify-content: flex-start; /* 메인축의 정렬을 담당 */
-  align-items: stretch; /* 교차축의 정렬을 담당 */
-  background-color: skyblue;
-  height: 60vh;
+  /* justify-content : 메인축의 정렬을 담당, align-items : 교차축의 정렬을 담당 */
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 28px 16px 36px;
 }
 
-.group{
-  /* 부모가 flex-container가 되었ㅊ응게 */
-  /* .group들은 flex-items가 된다잉. */
+.group {
+  /* 부모가 flex-container가 되었ㅊ응게 .group들은 flex-items가 된다잉. */
   border: 3px solid red;
+}
+
+.group1 {
+  width: 250px;
+}
+.group2 {
+  width: 380px;
+  order: -1;
+}
+.group3 {
+  width: 190px;
+  order: -1;
 }
 
 /* 슬로건 */
@@ -67,7 +81,7 @@ body {
 .footer {
   background-color: orange;
 }
-.footer-inner{
+.footer-inner {
   background-color: yellow;
   height: 10vh;
 }
