@@ -1,0 +1,43 @@
+body {
+  /* color: rrggbb 0 - f * 0 - f */
+  color: #f00;
+  font-size: 30px;
+}
+
+/* 태그, 요소 선택자 (1점) */
+div {
+  border: 1px solid blue;
+}
+
+/* .heading을 위로 올려보장. */
+/* .heading#heading : 우선 순위를 올려줌 */
+.heading {
+  color: purple;
+}
+
+/* 요소 선택자 + 클래스 선택자 (11점) */
+h1.heading {
+  /* border: inherit; */
+  color: green;
+}
+
+/* 클래스 선택자 (10점) */
+/* .heading {
+  color: purple;
+} */
+
+.techit {
+  color: gray ;
+}
+
+/* 10점 - 상속 */
+.container{
+  color: hotpink;
+}
+
+/* 아이디 선택자 (100점) */
+#heading{
+  color: dodgerblue;
+}
+
+/* 인라인 선택자 (1000점) */
