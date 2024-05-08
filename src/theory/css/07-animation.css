@@ -1,0 +1,44 @@
+@keyframes size {
+  /* width 속성을 이용한 사이즈 조절은 성능상 이슈가 있음 */
+  0% {
+    width: 0;
+    inline-size: 0;
+  }
+  100% {
+    width: 500px;
+    inline-size: 500px;
+  }
+}
+
+.box {
+  background: pink;
+  width: 0;
+  inline-size: 0;
+  overflow: hidden;
+
+  /* 개별 속성 */
+  /* animation-name: size;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function : 애니메이션의 자연스러움을 조절하는 속성
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  한번은 진행, 한번은 반대 방향으로 진행
+  animation-direction: alternate;
+  animation-iteration-count: 2; */
+
+  animation: size 10s 2s forwards ease-in-out running alternate 2;
+}
+
+/* 다크모드, 라이트모드 */
+/* @media (prefers-color-scheme: dark) {}
+@media (prefers-color-scheme: light) {} */
+
+/* 애니메이션 조절 (애니메이션 동작을 줄이고자 사용자가 선택할 때 */
+/* 애니메이션을 원하지 않아서 기능을 꺼놓게 되면 해당 기능이 활성화되어 애니메이션이 재생되지 않게 됨. */
+@media (prefers-reduced-motion: reduce) {
+  .box {
+    animation: none;
+  }
+}
