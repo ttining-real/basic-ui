@@ -1,0 +1,58 @@
+/* * 기본적인 배경 사용법 */
+.box {
+  width: 500px;
+  height: 100px;
+  inline-size: 500px;
+  block-size: 100px;
+  border: 20px dashed dodgerblue;
+  padding: 20px;
+  margin: 50px;
+  overflow: auto;
+
+  /* background-color: pink; */
+
+  /* 상대 경로 */
+  /* background-image: url(./../../images/coffee.png); */
+  /* 절대 경로 */
+  /* background-image: url(/images/coffee.png); */
+
+  /* background-repeat: no-repeat; */
+  /* background-position: 20% 30%; */
+
+  /* 원본 이미지보다 큰 사이즈로 지정하면 이미지가 깨져보이기 때문에 주의해야함. */
+  /* background-size: 110px 83px; */
+  /* background-size: cover; */
+  /* background-size: contain; */
+
+  /* background-attachment: fixed; */
+  /* background-attachment: scroll; */
+
+  /* 여섯가지 값을 한번에 지정 */
+  background: pink url(./../../images/coffee.png) no-repeat 20% 30% / 100px 83px
+    scroll;
+}
+
+/* * 멀티 배경 사용법 */
+.container {
+  width: 600px;
+  height: 300px;
+  inline-size: 600px;
+  block-size: 300px;
+  border: 1px solid red;
+  /* background-color: yellow; */
+  /* 먼저 선언한 이미지가 제일 아래에 깔린다. */
+  /* background-image: url(./../../images/ani_flower_01.png),
+    url(./../../images/ani_flower_02.png), url(./../../images/ani_flower_03.png),
+    url(./../../images/ani_flower_04.png); */
+  /* background-repeat: no-repeat, repeat, no-repeat, no-repeat; */
+  /* background-repeat: no-repeat;
+  background-position: 0 0, 100px 50px, 200px 30px, 50% 50%; */
+
+  /* 배경 칼라는 하나만 쓰일 수 있음 */
+  background: url(./../../images/ani_flower_01.png) no-repeat 0 0,
+    url(./../../images/ani_flower_02.png) no-repeat 200px 0, yellow;
+
+  /* 마지막에 쓴 url 앞에 칼라를 붙이는 방법도 있음 */
+  /* background: url(./../../images/ani_flower_01.png) no-repeat 0 0,
+    yellow url(./../../images/ani_flower_02.png) no-repeat 200px 0; */
+}
