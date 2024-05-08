@@ -53,11 +53,15 @@ body {
 @keyframes moveEffect {
   0% {
     font-size: 12px;
-    margin: 0;
     /* top: 0;
     inset-block-start: 0;
     left: 0;
     inset-inline-start: 0; */
+    /* margin: 0; */
+    /* transform: translate(0, 0) scale(1); */
+    /* transform: scale(1); */
+    translate: 0 0;
+    /* rotate: 0deg; */
   }
   100% {
     font-size: 24px;
@@ -65,17 +69,25 @@ body {
     inset-block-start: 75px;
     left: 400px;
     inset-inline-start: 400px; */
-    margin: 75px 0 0 400px; /* 박스 모델 */
+    /* margin: 75px 0 0 400px; 박스 모델 */
+    /* transform: translate(400px, 75px) scale(2); */
+    /* transform: scale(2); */
+    translate: 320px 75px;
+    /* rotate: 45deg; */
   }
 }
 
-.visual-text{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  animation-name: moveEffect;
-  animation-duration: 5000ms;
-  animation-fill-mode: forwards;
-  /* position: absolute;
-  z-index: 1; */
+@keyframes fadeEffect {
+  /* 1~4번 flower 이미지가 사라졌다가 나타났는 애니메이션 무한 반복 */
+  0% {
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .visual {
@@ -86,7 +98,7 @@ body {
   border: 1px solid transparent;
   &::before,
   &::after {
-    /* 공백 값보다 null 값이 더 좋다. */
+    /* 공백 값보다 null 값이 더 좋다. 널,, 조와헤...ㅎ,,*/
     content: '';
     width: inherit;
     inline-size: inherit;
@@ -96,6 +108,10 @@ body {
     top: 0;
     left: 0;
     background-repeat: no-repeat;
+    animation-name: fadeEffect;
+    animation-duration: 4000ms;
+    /* animation-iteration-count: infinite; */
+    animation-direction: alternate;
   }
 }
 .visual::before {
@@ -108,6 +124,21 @@ body {
   background-image: url(/images/ani_flower_03.png),
     url(/images/ani_flower_04.png);
   background-position: 300px 0px, 800px 30px;
+  animation-delay: 2000ms;
+}
+
+.visual-text{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  animation-name: moveEffect;
+  animation-duration: 5000ms;
+  animation-fill-mode: forwards;
+  /* position: absolute;
+  z-index: 1; */
+  /* width: fit-content; */
+  /* background: lime; */
+  display: inline-block;
+  z-index: 1;
+  position: relative;
 }
 
 /* 메인 */
