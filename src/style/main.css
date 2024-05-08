@@ -1,11 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); */
 
 :root {
   --container-size: 940px;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 그라디언트 배경, 다중 배경 이미지 */
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'SUIT Variable', sans-serif;
+  margin: 0;
+  background-color: #ccc;
+  background-image: url(./../images/bg_flower.png),
+    linear-gradient(180deg, #ccc 0%, #aaa 30%, #eee 50%, #fff 100%);
+  background-repeat: no-repeat;
+  background-position: 50% 0, 0 0;
+  /* background: #ccc linear-gradient(red, green); */
 }
 
 .header,
@@ -19,33 +33,58 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: darkblue;
   height: 120px;
   padding: 0 50px;
   border-radius: 0 0 15px 15px;
   border: 1px solid transparent;
   position: relative;
+  background-color: #fff;
 }
 
 /* 로고 */
-.logo{
-  background-color: orange;
+.logo {
+  /* background-color: orange; */
   position: absolute;
   top: 45px;
 }
 
 /* 비주얼 */
 .visual {
-  background-color: pink;
-  height: 10vh;
+  height: 120px;
+  block-size: 120px;
+  position: relative;
+  &::before,
+  &::after {
+    /* 공백 값보다 null 값이 더 좋다. */
+    content: '';
+    width: inherit;
+    inline-size: inherit;
+    height: inherit;
+    block-size: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+}
+.visual::before {
+  /* z-index: 1; */
+  background-image: url(./../images/ani_flower_01.png),
+    url(./../images/ani_flower_02.png);
+  background-position: 0px -10px, 600px 10px;
+}
+.visual::after {
+  background-image: url(./../images/ani_flower_03.png),
+    url(./../images/ani_flower_04.png);
+  background-position: 300px 0px, 800px 30px;
 }
 
 /* 메인 */
 .main {
-  background-color: skyblue;
   display: flow-root; /* 모던 방식 */
   min-height: 450px;
   padding: 28px 16px 36px;
+  background-color: #fff;
 }
 
 .group {
@@ -53,36 +92,36 @@ body {
   float: left;
 }
 
-.group:nth-child(n+2) {
+.group:nth-child(n + 2) {
   margin-left: 44px;
 }
 
 .group1 {
   width: 250px;
-  background: orange;
+  /* background: orange; */
 }
 .group2 {
   width: 380px;
-  background: dodgerblue;
+  /* background: dodgerblue; */
 }
 .group3 {
   width: 190px;
-  background: hotpink;
+  /* background: hotpink; */
 }
 
 /* 슬로건 */
 .slogan {
-  background-color: lime;
+  /* background-color: lime; */
   height: 10vh;
   clear: both;
 }
 
 /* 푸터 */
 .footer {
-  background-color: orange;
+  /* background-color: orange; */
 }
 .footer-inner {
-  background-color: yellow;
+  /* background-color: yellow; */
   height: 10vh;
 }
 
@@ -96,10 +135,10 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
   }
-  .group:nth-child(n+2) {
+  .group:nth-child(n + 2) {
     margin-left: 0;
   }
-  .group3{
+  .group3 {
     order: -1;
   }
 }
