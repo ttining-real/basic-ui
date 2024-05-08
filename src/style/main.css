@@ -1,7 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); */
+@import url(./theme.css);
 
 :root {
   --container-size: 940px;
+  --primary: var(--orange-200);
+  --secondary: var(--orange-100);
+  --border-primary: var(--gray-900);
 }
 
 *,
@@ -12,8 +15,9 @@
 
 /* 그라디언트 배경, 다중 배경 이미지 */
 body {
-  font-family: 'SUIT Variable', sans-serif;
   margin: 0;
+  line-height: 1.15;
+  font-family: 'SUIT Variable', sans-serif;
   background-color: #ccc;
   background-image: url(./../images/bg_flower.png),
     linear-gradient(180deg, #ccc 0%, #aaa 30%, #eee 50%, #fff 100%);
@@ -33,20 +37,58 @@ body {
 
 /* 헤더 */
 .header {
+  background-color: var(--primary);
   height: 120px;
-  padding: 0 50px;
+  padding: 0 28px;
   border-radius: 0 0 15px 15px;
   border: 1px solid transparent;
   position: relative;
-  background-color: #fff;
 }
 
 /* 로고 */
 .logo {
-  /* background-color: orange; */
   position: absolute;
   top: 45px;
   left: 60px;
+  margin: 0;
+  font-size: 1em;
+  a,
+  img {
+    /* 인라인 상자 정렬 */
+    /* vertical-align: top; */
+    /* vertical-align: middle; */
+    display: block;
+  }
+}
+
+/* 텍스트 링크 모음 */
+.member-service {
+  --spacing: 8px;
+  translate: var(--spacing, 8px) 0;
+  font-size: 0; /* 공백 문자 인식 때문에 상속 속성을 이용함 */
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0;
+  text-align: right;
+
+  /* 중첩 패턴 */
+  li {
+    display: inline-block;
+    margin: 0;
+    font-size: 0.875rem;
+    a {
+      display: inherit;
+      /* 센세는 4px로 해도 사이 여백 맞는데 나는 안맞음,, =ㅅ= */
+      /* padding: 8px var(--spacing, 8px) 8px 4px; */
+      padding: 8px var(--spacing, 8px) 8px 8px;
+      /* padding: 8px 8px 8px 4px; */
+      font-variant: small-caps;
+      margin: 0;
+      text-transform: uppercase;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
 }
 
 /* 비주얼 */
@@ -82,7 +124,7 @@ body {
   0% {
     opacity: 1;
   }
-  50%{
+  50% {
     opacity: 0;
   }
   100% {
@@ -127,7 +169,7 @@ body {
   animation-delay: 2000ms;
 }
 
-.visual-text{
+.visual-text {
   font-family: Georgia, 'Times New Roman', Times, serif;
   animation-name: moveEffect;
   animation-duration: 5000ms;

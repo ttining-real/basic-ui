@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>메인 페이지</title>
-  <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet" />
   <!-- <link rel="stylesheet" href="./style/normalize.css" /> -->
   <!-- <link rel="stylesheet" href="./style/minireset.css" /> -->
   <link rel="stylesheet" href="/style/main.css" />
+  <!-- <link rel="stylesheet" href="/components/css/member-service.css" /> -->
 </head>
 <body>
 
@@ -15,21 +16,22 @@
     <!-- 로고 - 콘텐츠 이미지 -->
     <h1 class="logo"><a href="/" class="logo-link"><img src="./images/logo.png" alt="웹카페" /></a></h1>
 
+    <!-- 웹카페가 텍스트 링크 모음을 대표하는 제목이 되기 때문에 따로 제목을 부여해주지 않음. -->
+    <!-- <h2>텍스트 링크 모음</h2> -->
+
     <!-- 텍스트 링크 모음 -->
+    <ul class="member-service">
+      <li><a href="/">홈</a></li>
+      <li><span aria-hidden="true">:</span><a href="/">로그인</a></li>
+      <li><span aria-hidden="true">:</span><a href="/">회원가입</a></li>
+      <li><span aria-hidden="true">:</span><a href="/">사이트맵</a></li>
+      <li><span aria-hidden="true">:</span><a href="/">english</a></li>
+    </ul>
 
     <!-- 메인 메뉴 -->
 
 
-    <!-- <h1><img src="./" alt="Web Cafe 로고" /></h1>
-    <div class="utmenu">
-      <ul>
-        <li><a href="/">홈</a></li>
-        <li><a href="/">로그인</a></li>
-        <li><a href="/">회원가입</a></li>
-        <li><a href="/">사이트맵</a></li>
-        <li><a href="/">ENGLISH</a></li>
-      </ul>
-    </div>
+    <!--
     <nav>
       <ul>
         <li><a href="/">HTML에 대해</a></li>
@@ -39,7 +41,8 @@
         <li><a href="/">묻고 답하기</a></li>
         <li><a href="/">자료실</a></li>
       </ul>
-    </nav> -->
+    </nav>
+  -->
   </header>
 
   <div role="group" class="visual">
