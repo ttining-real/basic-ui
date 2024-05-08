@@ -46,13 +46,44 @@ body {
   /* background-color: orange; */
   position: absolute;
   top: 45px;
+  left: 60px;
 }
 
 /* 비주얼 */
+@keyframes moveEffect {
+  0% {
+    font-size: 12px;
+    margin: 0;
+    /* top: 0;
+    inset-block-start: 0;
+    left: 0;
+    inset-inline-start: 0; */
+  }
+  100% {
+    font-size: 24px;
+    /* top: 75px;
+    inset-block-start: 75px;
+    left: 400px;
+    inset-inline-start: 400px; */
+    margin: 75px 0 0 400px; /* 박스 모델 */
+  }
+}
+
+.visual-text{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  animation-name: moveEffect;
+  animation-duration: 5000ms;
+  animation-fill-mode: forwards;
+  /* position: absolute;
+  z-index: 1; */
+}
+
 .visual {
   height: 120px;
   block-size: 120px;
   position: relative;
+  /* keyframes에 margin으로 블록 속성을 줬기 때문에 사이즈가 밀리지 않으려면 visual에 border를 줘야함! */
+  border: 1px solid transparent;
   &::before,
   &::after {
     /* 공백 값보다 null 값이 더 좋다. */
@@ -69,13 +100,13 @@ body {
 }
 .visual::before {
   /* z-index: 1; */
-  background-image: url(./../images/ani_flower_01.png),
-    url(./../images/ani_flower_02.png);
+  background-image: url(/images/ani_flower_01.png),
+    url(/images/ani_flower_02.png);
   background-position: 0px -10px, 600px 10px;
 }
 .visual::after {
-  background-image: url(./../images/ani_flower_03.png),
-    url(./../images/ani_flower_04.png);
+  background-image: url(/images/ani_flower_03.png),
+    url(/images/ani_flower_04.png);
   background-position: 300px 0px, 800px 30px;
 }
 
