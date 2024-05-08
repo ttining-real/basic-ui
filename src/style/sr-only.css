@@ -2,11 +2,12 @@
 /* 센세는 a11y-hidden 같은 클래스를 더 선호하긴 함,, */
 
 .sr-only {
-  background: red;
+  /* background: red; */
+
   position: absolute;
-  /* width의 논리속성 */
+  
+  /* width와 height의 논리속성 */
   inline-size: 1px;
-  /* height의 논리속성 */
   block-size: 1px;
 
   /* top: -9999px; */
@@ -14,18 +15,22 @@
   /* inset-block-start: -9999px; */
   /* ! top 좌표로 주는 순간, 스크린리더의 화면이 위로 튀어버림 */
 
-  overflow: hidden;
-
   /* 가끔 보이는 경우가 있어서 margin 네이티브 값을 줌 */
   margin: -1px;
 
   /* * clip - position: absolute와 함께 써야함. */
   /* * clip은 더 이상 권장되지  않음 */
-  /* clip: rect(0, 0, 0, 0); */
+  /* 그러나 구형 브라우저의 경우 clip 코드를 읽음 */
+  clip: rect(0, 0, 0, 0);
   
   /* * 이젠 이거 씀 */
   /* TODO clip-path-maker 찾아보기 (https://bennettfeely.com/clippy/) */
   clip-path: polygon(0 0, 0 0, 0 0);
+
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* width와 height를 0px로 주면 되지 않음? */
