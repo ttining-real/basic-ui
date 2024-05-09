@@ -1,0 +1,231 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+/* input 컴포넌트 */
+.form-input {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+
+  label {
+    white-space: nowrap;
+  }
+
+  input {
+    /* flex-grow: 확대 / flex-shrink: 축소 */
+    flex-grow: 1;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 1px 1px 1px 8px;
+    height: 24px;
+    block-size: 24px;
+    width: 100%;
+  }
+}
+
+/* button 컴포넌트 */
+.button {
+  --bg-color: var(--orange-200);
+  --color: var(--white);
+  --radius: 3px;
+
+  border: 0;
+  padding: 16px 10px;
+  background-color: var(--bg-color);
+  color: var(--color);
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+
+/* 링크 텍스트 컴포넌트 (아이콘 유형) */
+.icon-link {
+  --color: var(--orange-200);
+
+  [class*='fas'] {
+    color: var(--orange-200);
+    padding-right: 0.25em;
+    padding-inline-end: 0.25em;
+  }
+}
+
+/* 로그인 */
+.login {
+  --box-start-color: var(--orange-100);
+  --box-end-color: var(--orange-200);
+  --box-shadow-color: var(--gray-700);
+
+  /* at right top : 오른쪽 상단부터 그라데이션 하겠다는 뜻ㅎ */
+  background-image: radial-gradient(
+    circle at right top,
+    var(--box-start-color),
+    var(--box-end-color)
+  );
+  border-radius: 5px;
+  padding: 12px;
+  box-shadow: 5px 5px 0 0 var(--box-shadow-color);
+}
+
+.login-title {
+  --color: var(--yellow);
+
+  color: var(--color);
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.login-form {
+  margin-top: 20px;
+  margin-block-start: 20px;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
+
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 70px;
+    block-size: 70px;
+    border-bottom: 1px solid #ccc;
+
+    /* * flex를 쓰는 방법 */
+    /* flex를 이용하려면 높이를 고정해주어야 함. */
+    /* height: 50px;
+    block-size: 50px;
+    background-color: pink;
+    display: flex;
+    flex-flow: column wrap; */
+  }
+
+  div {
+    /* display: flow-root; */
+    /* float: left; */
+    /* margin-bottom: 5px; */
+    /* margin-block-end: 5px; */
+  }
+
+  label {
+    /* background-color: firebrick; */
+    display: inline-block;
+    width: 4em;
+    inline-size: 4em;
+    /* float: left; */
+  }
+  input {
+    /* float: left; */
+    width: calc(100% - 145px);
+    inline-size: calc(100% - 145px);
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 1px 1px 1px 8px;
+    height: 24px;
+  }
+}
+
+.login-button {
+  border: 0;
+  padding: 16px 10px;
+  background-color: var(--orange-200);
+  color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  inset-block-start: 0;
+  right: 0;
+  inset-inline-end: 0;
+}
+
+.member-sign {
+  background-color: #fff;
+  margin: 0;
+  list-style: none;
+  padding: 0 10px 10px;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* .login-form {
+  --box-background: var(--white);
+  background: var(--box-background);
+  border-radius: 5px;
+  fieldset {
+    position: relative;
+    margin: 0;
+    padding: 8px;
+    border: none;
+  }
+  legend {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .user-email {
+    label {
+      font-size: 0.875rem;
+      color: var(--black);
+    }
+    input {
+      padding-left: 8px;
+      min-height: 24px;
+      border: 1px solid var(--gray-500);
+      border-radius: 5px;
+    }
+  }
+  .user-pwd {
+    label {
+      font-size: 0.875rem;
+      color: var(--black);
+    }
+    input {
+      padding-left: 8px;
+      min-height: 24px;
+      border: 1px solid var(--gray-500);
+      border-radius: 5px;
+    }
+  }
+  .login-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 0.8125rem;
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    background: var(--orange-200);
+  }
+}
+
+.member-sign {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  li {
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      font-size: 0.8125rem;
+      color: var(--content);
+    }
+    .fa-angle-right{
+      font-size: 0.8125rem;
+      font-weight: bolder;
+      color: var(--orange-200);
+    }
+  }
+} */
