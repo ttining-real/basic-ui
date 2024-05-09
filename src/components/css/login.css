@@ -1,7 +1,9 @@
+@import url(/style/theme.css);
+
 :root{
   --base-font-family: 'SUIT Variable', sans-serif;
 }
 
 body{
-  font-family: 'SUIT Variable', sans-serif;
+  font-family: var(--base-font-family);
 }

@@ -1,6 +1,7 @@
-@import url(./theme.css);
+@import url(/style/theme.css);
 
 :root {
+  --base-font-family: 'SUIT Variable', sans-serif;
   --container-size: 940px;
   --primary: var(--orange-200);
   --secondary: var(--orange-100);
@@ -17,13 +18,12 @@
 body {
   margin: 0;
   line-height: 1.15;
-  font-family: 'SUIT Variable', sans-serif;
+  font-family: var(--base-font-family);
   background-color: #ccc;
   background-image: url(./../images/bg_flower.png),
     linear-gradient(180deg, #ccc 0%, #aaa 30%, #eee 50%, #fff 100%);
   background-repeat: no-repeat;
   background-position: 50% 0, 0 0;
-  /* background: #ccc linear-gradient(red, green); */
 }
 
 .header,
