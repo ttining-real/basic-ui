@@ -1,6 +1,10 @@
 /* 텍스트 링크 모음 */
 :root{
-  --base-font-family: "SUIT-Variable", sans-serif;
+  --base-font-family: 'SUIT Variable', sans-serif;;
+}
+
+body{
+  font-family: 'SUIT Variable', sans-serif;
 }
 
 .member-service {
