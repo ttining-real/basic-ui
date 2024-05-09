@@ -1,0 +1,124 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+/* input 컴포넌트 */
+.form-input {
+  --spacing: 10px;
+  --border-color: var(--gray-500);
+  --radius: 3px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: var(--spacing);
+
+  label {
+    white-space: nowrap;
+  }
+
+  input {
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1px 1px 1px 8px;
+    height: 24px;
+    block-size: 24px;
+    width: 100%;
+  }
+  input:focus {
+    outline: none;
+  }
+}
+
+/* button 컴포넌트 */
+.button {
+  --bg-color: var(--orange-200);
+  --color: var(--white);
+  --radius: 3px;
+
+  border: 0;
+  padding: 16px 10px;
+  background-color: var(--bg-color);
+  color: var(--color);
+  border-radius: var(--radius);
+  white-space: nowrap;
+
+  &.search-button {
+    background-color: var(--black);
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+}
+
+.search-group {
+  background: lightblue;
+  background-image: linear-gradient(to bottom, #ccc, #fff);
+  border: 1px solid #aaa;
+  border-bottom-color: #fff;
+  padding: 12px 24px 8px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+
+  .form-input {
+    flex-grow: 1;
+    
+  }
+  [class*="fab"] {
+    padding-right: 0.25em;
+    padding-inline-end: 0.25em;
+  }
+  input, button {
+    height: 30px;
+    block-size: 30px;
+  }
+}
+
+/* 검색 */
+/* .search {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  background-color: #ccc;
+  background-image: linear-gradient(#ccc, #eee);
+}
+
+
+.search-group {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  .form-input {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    label {
+      white-space: nowrap;
+      font-size: 13px;
+    }
+    input {
+      flex-grow: 1;
+      padding: 1px 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      height: 24px;
+      block-size: 24px;
+      font-size: 14px;
+    }
+  }
+  .button {
+    background: #000;
+    color: #fff;
+    border: 0;
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 4px 8px;
+  }
+} */
