@@ -1,0 +1,41 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+body {
+  margin: 50px;
+}
+
+/* .easy-login{
+
+} */
+
+.form-checkbox {
+  position: relative;
+  
+  input{
+    position: absolute;
+    /* appearance : 겉모양 */
+    appearance: none;
+    width: 12px;
+    height: 12px;
+  }
+
+  label {
+    /* 슬래시는 포지션과 사이즈를 구분하는 마크이다. */
+    background: url(./../images/un-check.svg) no-repeat 0 0 / contain;
+    padding-left: 25px;
+  }
+  
+  input:checked + label {
+    background-image: url(./../images/checked.svg);
+  }
+
+  input:focus {
+    outline: none;
+  }
+  
+  input:focus-visible{
+    outline: 2px solid red;
+  }
+}
