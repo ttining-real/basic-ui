@@ -12,8 +12,8 @@ body {
 
 .form-checkbox {
   position: relative;
-  
-  input{
+
+  input {
     position: absolute;
     /* appearance : 겉모양 */
     appearance: none;
@@ -26,7 +26,7 @@ body {
     background: url(./../images/un-check.svg) no-repeat 0 0 / contain;
     padding-left: 25px;
   }
-  
+
   input:checked + label {
     background-image: url(./../images/checked.svg);
   }
@@ -34,8 +34,43 @@ body {
   input:focus {
     outline: none;
   }
-  
-  input:focus-visible{
+
+  input:focus-visible {
     outline: 2px solid red;
+    outline-offset: 1px;
+  }
+}
+
+.tooltip {
+  background: yellowgreen;
+
+  .tooltip-icon {
+    background: pink;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* currentColor 라고 쓰면 폰트 색상 따라감,,, 'ㅇ' */
+    border: 1px solid currentColor;
+    padding: 0.25em;
+    font-size: 0.75rem;
+    color: red;
+
+    &:hover + .tooltip-content,
+    &:focus + .tooltip-content {
+      display: block;
+    }
+  }
+
+  .tooltip-content {
+    display: none;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    color: #fff;
+    max-width: 16em;
+    border-radius: 8px;
   }
 }

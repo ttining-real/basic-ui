@@ -13,14 +13,32 @@
   </head>
   <body>
     <h1 class="sr-only">체크박스 컴포넌트</h1>
-    
-    <!-- <div class="easy-login">
-      <input type="checkbox" id="checkbox" />
-      <label for="checkbox">간편로그인 정보 저장</label>
-    </div> -->
+
+    <!-- 체크박스 컴포넌트 -->
     <div class="form-checkbox">
       <input type="checkbox" id="saveLoginInformation" name="saveLoginInformation" />
       <label for="saveLoginInformation">간편로그인 정보 저장</label>
+    </div>
+    
+    <!-- 라디오 버튼 컴포넌트 -->
+    <div role="group" aria-labelledby="gender">
+      <strong id="gender">성별</strong>
+      <div class="form-radio">
+        <input type="radio" id="male" name="gender" />
+        <label for="male">남자</label>
+      </div>
+      <div class="form-radio">
+        <input type="radio" id="female" name="gender" />
+        <label for="female">여자</label>
+      </div>
+    </div>
+    
+
+
+    <!-- 정보를 제공하는 Tooltip 컴포넌트 -->
+    <div role="tooltip" class="tooltip">
+      <span tabindex="0" class="tooltip-icon fas fa-info" aria-label="간편 로그인 정보 저장 안내 사항"></span>
+      <strong class="tooltip-content">로그인한 계정의 정보가 저장됩니다. 개인정보 보호를 위해 개인 기기에서만 사용해 주세요.</strong>
     </div>
   </body>
 </html>
