@@ -1,0 +1,115 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+body {
+  margin: 50px;
+}
+
+/* 로고 */
+.logo {
+  position: absolute;
+  top: 64px;
+  left: 80px;
+  margin: 0;
+  font-size: 1em;
+  a,
+  img {
+    display: block;
+  }
+}
+
+.menu {
+  /* background-color: orange; */
+  /* 백그라운드 이미지를 불러올 수 없는 상황도 고려해야함 => 대안 만들기(gradient 앞에 대체 색상 지정) */
+  background: orangered linear-gradient(to bottom, orange, orangered, orange);
+  box-shadow: 0 -5px 0 #000;
+  /* color: #fff; */
+  color: #000;
+  display: flow-root;
+  padding-left: 225px;
+  padding-inline-start: 225px;
+  /* position: relative; */
+
+  /* 자식 선택자 */
+  > li {
+    float: left;
+    /* 클릭할 수 없는 요소이므로 button이 아니라 li에 준다. */
+    border-left: 2px solid #fff;
+    position: relative;
+  }
+  > li:nth-child(-n + 3) ul {
+    left: 0;
+  }
+  > li:nth-child(n + 4) ul {
+    right: 0;
+  }
+
+  .is--active {
+    button {
+      color: yellow;
+
+      &::after {
+        content: '';
+        background: purple linear-gradient(to right, black, white);
+        display: block;
+        height: 1px;
+        /* border-top: 2px solid blue; */
+      }
+    }
+    ul {
+      display: flex;
+    }
+  }
+
+  button {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 24px;
+    height: 60px;
+    block-size: 60px;
+    line-height: 60px;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    /* 멀티 shadow가 가능하다. (x, y, blur, color) */
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  /* 속성 선택자 */
+  /* button[aria-expanded='true'] {
+    color: lime;
+  } */
+
+  ul {
+    display: none;
+    position: absolute;
+    top: 65px;
+    /* left: 0; */
+
+    li {
+      display: inline-block;
+      white-space: nowrap;
+      margin-right: 4px;
+      margin-inline-end: 4px;
+    }
+
+    a {
+      display: block;
+      padding: 8px;
+      /* flex, gap 사용해도 됨 */
+      span {
+        margin-right: 0.25em;
+        margin-inline-end: 0.25em;
+      }
+    }
+  }
+
+  /* ul[aria-hidden='false'] {
+    display: block;
+  } */
+}
