@@ -4,6 +4,12 @@
   font-family: 'SUIT Variable', sans-serif;
 } */
 
+body {
+  /* font-size: 16px; */
+  /* 최소 12px / 기준값3vw / 최대 36px */
+  /* font-size: clamp(12px, 3vw, 36px); */
+}
+
 .container {
   display: flex;
   flex-flow: column nowrap;
@@ -16,8 +22,11 @@
 }
 
 .container-flude {
-  width: 80%;
   margin: 0 auto;
+  /* width: 80%;
+  max-width: 1200px;
+  min-width: 500px; */
+  /* width: clamp(500px, 80%, 800px); */
 }
 
 .container-fixed {
@@ -25,18 +34,33 @@
   margin: 0 auto;
 }
 
-.header,
-.navigation,
-.wrapper,
-.footer {
-  width: 80%;
-  margin: 0 auto;
-}
-
 .header {
   height: 70px;
   block-size: 70px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 20px;
+  div {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #000;
+  }
 }
+
+.logo{
+  margin-right: auto;
+  margin-inline-end: auto;
+  flex-shrink: 0;
+}
+.search {
+  flex-basis: 500px;
+  flex-grow: 1;
+}
+.login{
+  order: 1;
+  flex-shrink: 0;
+}
+
 
 .navigation {
   height: 50px;
