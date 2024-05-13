@@ -1,0 +1,88 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+/* .pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  button {
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    .fas {
+      color: var(--light-blue);
+    }
+    &:hover {
+      .fas {
+        color: var(--dark-blue);
+      }
+    }
+    &:active {
+      border: 2px solid var(--dark-blue);
+      .fas {
+        color: var(--dark-blue);
+      }
+    }
+  }
+  ol {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 0.5rem;
+    li {
+      flex: 0 0 24px;
+      text-align: center;
+      a {
+        display: block;
+        color: var(--light-blue);
+        &.is-selected {
+          color: var(--dark-blue);
+          font-weight: bolder;
+        }
+      }
+      &:hover {
+        a {
+          color: var(--dark-blue);
+        }
+      }
+    }
+  }
+} */
+
+.pagination {
+  --text-color: var(--light-blue);
+  --selected-text-color: var(--dark-blue);
+
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 0.5rem;
+
+  button{
+    border: 0;
+    background: transparent;
+    padding: 0;
+    flex: 0 0 2rem;
+  }
+
+  div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex: 1 1 0;
+
+    a{
+      color: var(--text-color);
+      padding: 0.5rem 1rem;
+
+      &.is-selected {
+        color: var(--dark-blue);
+        font-weight: 700;
+      }
+    }
+  }
+}

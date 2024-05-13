@@ -21,8 +21,9 @@ body {
   } */
 }
 
-.container-flude {
+.container-fluid {
   margin: 0 auto;
+  width: 80%;
   /* width: 80%;
   max-width: 1200px;
   min-width: 500px; */
@@ -41,6 +42,7 @@ body {
   flex-flow: row nowrap;
   align-items: center;
   gap: 20px;
+  padding: 0 20px;
   div {
     background-color: #fff;
     box-shadow: 0 0 0 1px #000;
@@ -48,8 +50,8 @@ body {
 }
 
 .logo{
-  margin-right: auto;
-  margin-inline-end: auto;
+  /* margin-right: auto;
+  margin-inline-end: auto; */
   flex-shrink: 0;
 }
 .search {
@@ -73,23 +75,66 @@ body {
   flex-flow: row nowrap;
   column-gap: 50px;
   flex: 1 0 0;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 .main {
   /* auto 값을 가지지 않은 flex-basis와 width 값을 동시에 적용한 경우 flex-basis가 우선한다. */
-  flex-basis: 200px;
+  /* flex-basis: 200px;
   flex-grow: 6;
-  flex-shrink: 0;
+  flex-shrink: 0; */
+  flex: 1 0 0;
+  box-shadow: 0 0 0 1px #000;
+  min-width: 300px;
+
+  .pagination{
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
 
 .sidebar {
-  flex-basis: 200px;
+  /* flex-basis: 200px;
   flex-grow: 1;
-  flex-shrink: 0;
+  flex-shrink: 0; */
+  flex: 0 0 150px;
 }
 
 .footer {
   height: 50px;
   block-size: 50px;
+}
+
+.pagination {
+  --text-color: var(--light-blue);
+  --selected-text-color: var(--dark-blue);
+
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 0.5rem;
+
+  button{
+    border: 0;
+    background: transparent;
+    padding: 0;
+    flex: 0 0 2rem;
+  }
+
+  div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex: 1 1 0;
+
+    a{
+      color: var(--text-color);
+      padding: 0.5rem 1rem;
+
+      &.is-selected {
+        color: var(--dark-blue);
+        font-weight: 700;
+      }
+    }
+  }
 }
