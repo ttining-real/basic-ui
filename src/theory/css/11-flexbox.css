@@ -1,0 +1,71 @@
+@import url(/theory/css/default.css);
+
+/* body {
+  font-family: 'SUIT Variable', sans-serif;
+} */
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+
+  /* div {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #000;
+  } */
+}
+
+.container-flude {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container-fixed {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header,
+.navigation,
+.wrapper,
+.footer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  height: 70px;
+  block-size: 70px;
+}
+
+.navigation {
+  height: 50px;
+  block-size: 50px;
+}
+
+/* .main과 .sidebar를 Grouping */
+.wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 50px;
+  flex: 1 0 0;
+  overflow: auto;
+}
+
+.main {
+  /* auto 값을 가지지 않은 flex-basis와 width 값을 동시에 적용한 경우 flex-basis가 우선한다. */
+  flex-basis: 200px;
+  flex-grow: 6;
+  flex-shrink: 0;
+}
+
+.sidebar {
+  flex-basis: 200px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.footer {
+  height: 50px;
+  block-size: 50px;
+}
