@@ -18,13 +18,13 @@
 
     <div class="tabs">
       
-      <div class="tab-list">
-        <div class="tab is-selected">공지사항</div>
-        <div class="tab">자료실</div>
+      <div class="tab-list" role="tablist">
+        <div class="tab is-selected" role="tab" id="tab1" aria-controls="tabpael1" aria-selected="true" tabindex="0">공지사항</div>
+        <div class="tab" role="tab" id="tab2" aria-controls="tabpael2" aria-selected="false" tabindex="0">자료실</div>
       </div>
       
       <!-- 공지사항 패널 -->
-      <div class="tab-panel is-selected">
+      <div class="tab-panel is-selected" role="tabpanel" aria-labelledby="tab1" id="tabpael1">
         <div class="tab-panel-item">
           <a href="/"><span class="fas fa-circle-dot"></span>HTML의 모든 것을 알려주마 샘플 활용법</a>
           <span>2024.04.22</span>
@@ -49,7 +49,7 @@
       </div>
       
       <!-- 자료실 패널 -->
-      <div class="tab-panel">
+      <div class="tab-panel" role="tabpanel" aria-labelledby="tab2" id="tabpael2">
         <div class="tab-panel-item">
           <a href="/"><span class="fas fa-circle-dot"></span>웹접근성 향상을 위한 HTML 마크업</a>
           <span>2024.04.22</span>
