@@ -1,0 +1,84 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+/* ~ 나의 꿈을 펼쳐봐~ ~ */
+
+body,
+h1 {
+  margin: 20px;
+}
+
+.tabs {
+  width: 50%;
+  position: relative;
+
+  /* &:has(.is-selected) {
+    .tab-panel {
+      background-color: blue;
+    }
+  } */
+}
+
+.tab-list {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .tab {
+    padding: 0.5rem 0.75rem;
+    color: var(--gray-700);
+    border-radius: 0.25rem 0.25rem 0 0;
+    border: 1px solid var(--gray-700);
+    background: var(--gray-300);
+    cursor: pointer;
+    &.is-selected {
+      color: var(--orange-200);
+      border-color: currentColor currentColor white currentColor;
+      background-color: var(--white);
+    }
+  }
+}
+
+.tab-panel {
+  display: none;
+  /* display: flex; */
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+  padding-block-end: 1.5rem;
+
+  .tab-more {
+    position: absolute;
+    top: 0.5rem;
+    inset-block-start: 0.5rem;
+    right: 0;
+    inset-inline-end: 0;
+    span {
+      margin-right: 0.25rem;
+    }
+  }
+
+  &.is-selected{
+    display: flex;
+  }
+
+  .tab-panel-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    a {
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      span {
+        margin-right: 0.25rem;
+      }
+    }
+    span {
+      flex: 0 0 auto;
+    }
+  }
+}
