@@ -1,0 +1,54 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+.card {
+  background: white;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.75rem;
+  border-radius: 0.25rem;
+
+  h2,
+  p,
+  ul {
+    padding: 0 1.25rem;
+  }
+
+  h2 {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #1c3858;
+  }
+  figure {
+    order: -1;
+    margin: 0 auto;
+    img {
+      max-width: 100%;
+      vertical-align: top;
+      border-radius: 0.25rem 0.25rem 0 0;
+    }
+  }
+  p {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.15;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.375rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    li {
+      flex: 0 0 auto;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.8125rem;
+      color: #4b6787;
+      border-radius: 2rem;
+      background: #edf1f5;
+    }
+  }
+}
