@@ -43,23 +43,27 @@ body {
   padding: 0;
   width: 24px;
   height: 24px;
-
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+  position: relative;
   
   .burger-bar {
     width: 100%;
     height: 20%;
+    position: absolute;
+    left: 0;
     background-color: black;
     border-radius: 20px;
-    transition: all 0.2s;
+    transition: all 200ms;
 
     &.burger-bar-top {
+      top: 0;
     }
     &.burger-bar-middle {
+      top: 50%;
+      translate: 0 -50%;
     }
     &.burger-bar-bottom {
+      top: 100%;
+      translate: 0 -100%;
     }
   }
 }
@@ -67,19 +71,27 @@ body {
 /* is-active 클래스가 있을 경우 */
 .burger-button.is-active {
   overflow: hidden;
-  justify-content: center;
   
-  .burger-bar-top {
-    translate: 0 100%;
-    rotate: 45deg;
+  span {
   }
-  
-  .burger-bar-middle {
-    translate: -100% 0;
-  }
-  
+
+  .burger-bar-top,
   .burger-bar-bottom {
-    translate: 0 -100%;
+    top: 50%;
+    translate: 0 -50%;
+  }
+
+  .burger-bar-top {
+    rotate: 45deg;
+    /* rotate: 3turn; */
+  }
+
+  .burger-bar-middle {
+    /* translate: -100% -50%; */
+    transform: translateX(-100%);
+  }
+
+  .burger-bar-bottom {
     rotate: -45deg;
   }
 }
