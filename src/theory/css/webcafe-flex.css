@@ -43,12 +43,11 @@ body {
   padding: 0;
   width: 24px;
   height: 24px;
-  
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
 
-  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  
   overflow: hidden;
   
   .burger-bar {
@@ -58,27 +57,21 @@ body {
     border-radius: 20px;
     transition: all 0.2s;
 
-    grid-area: 1 / 1 / 2 / 2;
-    
     &.burger-bar-top {
-      align-self: start;
     }
     &.burger-bar-middle {
-      align-self: center;
     }
     &.burger-bar-bottom {
-      align-self: end;
     }
   }
 }
 
 /* is-active 클래스가 있을 경우 */
 .burger-button.is-active {
-  .burger-bar-top, .burger-bar-bottom{
-    align-self: center;
-  }
-
+  justify-content: center;
+  
   .burger-bar-top {
+    translate: 0 100%;
     rotate: 45deg;
   }
   
@@ -87,6 +80,7 @@ body {
   }
   
   .burger-bar-bottom {
+    translate: 0 -100%;
     rotate: -45deg;
   }
 }
@@ -113,4 +107,40 @@ body {
     translate: 0 0;
     background: hotpink;
   }
+
+  /* a {
+    font-size: 20px;
+    transition: color 1000ms;
+    &:hover {
+      color: greenyellow;
+    }
+  } */
 }
+
+/* 그리드 레이아웃 (1) */
+/* .main {
+  flex: 1 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 24px;
+  grid-template-areas:
+    'book book book book news news news news news news news news'
+    'board board board board twitter twitter twitter twitter twitter favorite favorite favorite';
+}
+
+.book {
+  grid-area: book;
+}
+.news {
+  grid-area: news;
+}
+.board {
+  grid-area: board;
+}
+.favorite {
+  grid-area: favorite;
+}
+.twitter {
+  grid-area: twitter;
+} */
