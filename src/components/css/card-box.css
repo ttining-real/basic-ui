@@ -31,7 +31,7 @@ h1 {
   .container {
     max-width: 1440px;
     margin: 0 auto;
-    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* auto-fit과 auto-fill의 차이점 */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
