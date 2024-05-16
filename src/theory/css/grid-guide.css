@@ -1,7 +1,8 @@
 :root{
-  /* --min-container-size: 320px; */
-  /* --max-container-size: 1200px; */
-  /* --spacing: 24px; */
+  --min-container-size: 320px;
+  --max-container-size: 1200px;
+  --spacing: 24px;
+  --column-count: 12;
 }
 
 body {
