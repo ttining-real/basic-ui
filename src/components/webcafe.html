@@ -6,20 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>그리드 가이드</title>
   <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet" />
-  <!-- <link rel="stylesheet" href="/theory/css/grid-guide.css" /> -->
+  <link rel="stylesheet" href="/theory/css/grid-guide.css" />
   <link rel="stylesheet" href="/theory/css/default.css" />
-  <link rel="stylesheet" href="/components/css/webcafe.css" />
+  <link rel="stylesheet" href="/theory/css/webcafe.css" />
   <script type="module" src="/theory/js/grid-guide.js"></script>
 </head>
 
 <body>
 
   <div class="container">
-    <header class="header yellow">header</header>
-    <nav class="navigation pink">nav</nav>
+    <header class="header yellow">
+      header
+      
+      <button type="button" aria-label="메인 메뉴 열기" class="burger-button">
+        <span class="burger-bar burger-bar-top"></span>
+        <span class="burger-bar burger-bar-middle"></span>
+        <span class="burger-bar burger-bar-bottom"></span>
+      </button>
+    </header>
+    <div class="navigation pink">
+      <nav class="menu" aria-label="메인 메뉴">
+        <div class="menu-item"><a href="/" class="menu-link">링크 목록</a></div>
+        <div class="menu-item"><a href="/" class="menu-link">링크 목록</a></div>
+        <div class="menu-item"><a href="/" class="menu-link">링크 목록</a></div>
+        <div class="menu-item"><a href="/" class="menu-link">링크 목록</a></div>
+      </nav>
+    </div>
     <main class="main green grid-container">
-      <div class="book skyblue cols-6 sm-cols-4 lg-cols-3">추천서적</div>
-      <div class="news orange cols-6 sm-cols-8 lg-cols-12">새소식</div>
+      <div class="book skyblue cols-6 sm-cols-4 lg-cols-6">추천서적</div>
+      <div class="news orange cols-6 sm-cols-8 lg-cols-6">새소식</div>
       <div class="board gray cols-12 sm-cols-8 lg-cols-4">게시판</div>
       <div class="favorite red cols-6 sm-cols-4 lg-cols-3">인기 사이트</div>
       <div class="twitter olivegreen cols-6 sm-cols-12 lg-cols-5">트위터</div>
@@ -28,7 +43,7 @@
   </div>
 
   <!-- Grid System -->
-  <!-- <div class="grid grid-show">
+  <div class="grid grid-show">
     <div class="grid-column"></div>
     <div class="grid-column"></div>
     <div class="grid-column"></div>
@@ -41,7 +56,7 @@
     <div class="grid-column"></div>
     <div class="grid-column"></div>
     <div class="grid-column"></div>
-  </div> -->
+  </div>
 </body>
 
 </html>

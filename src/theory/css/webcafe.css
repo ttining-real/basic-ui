@@ -1,0 +1,120 @@
+@import url(/style/reset.css);
+@import url(/style/base.css);
+@import url(./grid.css);
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  .header,
+  .navigation,
+  .footer {
+    height: 100px;
+    block-size: 100px;
+    width: 100%;
+    inlin-size: 100%;
+  }
+
+  .main {
+    flex: 1 0 auto;
+    max-width: 100%;
+    width: 90%;
+    gap: 24px;
+  }
+}
+
+/* 햄버거 버튼 */
+.burger-button {
+  background: red;
+  border: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+
+  /* display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between; */
+  position: relative;
+
+  .burger-bar{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    left: 0;
+    background: black;
+
+    &.burger-bar-top{
+      top: 0;
+    }
+    &.burger-bar-middle{
+      top: 50%;
+      translate: 0 -50%;
+    }
+    &.burger-bar-bottom{
+      top: 100%;
+      translate: 0 -100%;
+      /* bottom: 0; */
+    }
+  }
+}
+
+/* transition(전이 효과) - 애니메이션 */
+/* 내비게이션 */
+.menu {
+  position: fixed;
+  background: orange;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100vh;
+  translate: -100% 0;
+  /* transition-property: translate, background;
+  transition-duration: 2000ms;
+  transition-delay: 0ms, 4000ms;
+  transition-timing-function: ease-in-out; */
+  /* transition: translate 2000ms 1000ms ease-in-out; */
+  transition: translate 2000ms 0ms ease-in-out, background 2000ms 2000ms ease-in-out;
+
+  &.is-active {
+    translate: 0 0;
+    background: hotpink;
+  }
+
+  /* a {
+    font-size: 20px;
+    transition: color 1000ms;
+    &:hover {
+      color: greenyellow;
+    }
+  } */
+}
+
+/* 그리드 레이아웃 (1) */
+/* .main {
+  flex: 1 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 24px;
+  grid-template-areas:
+    'book book book book news news news news news news news news'
+    'board board board board twitter twitter twitter twitter twitter favorite favorite favorite';
+}
+
+.book {
+  grid-area: book;
+}
+.news {
+  grid-area: news;
+}
+.board {
+  grid-area: board;
+}
+.favorite {
+  grid-area: favorite;
+}
+.twitter {
+  grid-area: twitter;
+} */
