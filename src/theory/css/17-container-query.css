@@ -1,0 +1,73 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+/* ! 임시 */
+body {
+  margin: 1.25rem;
+}
+h1 {
+  margin-bottom: 1.25rem;
+}
+
+/* 카드 컴포넌트 */
+.post {
+  container-type: inline-size;
+  .card {
+    border: 1px solid #aaa;
+    border-radius: 0.5rem;
+    background: #ccc linear-gradient(to bottom, #ccc, #eee);
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    @container (min-width: 400px) {
+      font-size: 2rem;
+    }
+    @container (min-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+  p {
+    line-height: 1.5;
+
+    @container (min-width: 400px) {
+      color: green;
+    }
+  }
+}
+
+/* 카드 레이아웃 */
+.wrapper {
+  display: grid;
+  /* max 크기보다 min 크기를 고정해주는 것이 좋다. */
+  /* grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); */
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  gap: 1.25rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .large-box {
+    /* size로 기준을 정하는 것보다 inline-size로 정하는 것이 보편적임. */
+    container-type: inline-size;
+    container-name: box;
+
+    .card {
+      background-image: linear-gradient(to bottom, orange, yellow);
+      @container box (min-width: 500px) {
+        h2 {
+          color: darkolivegreen;
+        }
+      }
+    }
+  }
+}
