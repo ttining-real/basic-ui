@@ -6,26 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>그리드 가이드</title>
   <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet" />
-  <!-- <link rel="stylesheet" href="/theory/css/grid-guide.css" /> -->
+  <link rel="stylesheet" href="/theory/css/grid-guide.css" />
   <link rel="stylesheet" href="/theory/css/default.css" />
   <link rel="stylesheet" href="/theory/css/webcafe.css" />
-  <!-- <script type="module" src="/theory/js/grid-guide.js"></script> -->
+  <link rel="stylesheet" href="/components/css/sprites.css" />
+  <script type="module" src="/theory/js/grid-guide.js"></script>
   <script type="module" src="/js/navigation.js"></script>
 </head>
 
 <body>
 
   <div class="container">
-    <header class="header yellow">
+    <header class="header">
       <div class="logo" aria-label="웹카페"></div>
-      
+
       <button type="button" aria-label="메인 메뉴 열기" class="burger-button">
         <span class="burger-bar burger-bar-top"></span>
         <span class="burger-bar burger-bar-middle"></span>
         <span class="burger-bar burger-bar-bottom"></span>
       </button>
     </header>
-    <div class="navigation pink">
+    <div class="navigation">
       <nav class="menu" aria-label="메인 메뉴">
         <div class="menu-item"><a href="/" class="menu-link">링크 목록</a></div>
         <div class="menu-item"><a href="/" class="menu-link">링크 목록</a></div>
@@ -33,19 +34,26 @@
         <div class="menu-item"><a href="/" class="menu-link">링크 목록</a></div>
       </nav>
     </div>
-    <main class="main green grid-container">
-      <div class="book skyblue cols-6 sm-cols-4 lg-cols-6">
-        <div class="sprite">추천서적</div>
+    <main class="main grid-container">
+      <div class="book cols-6 sm-cols-4 lg-cols-6">
+        <div class="flex-items-center headline sprite sprite-book">추천서적</div>
       </div>
-      <div class="news orange cols-6 sm-cols-8 lg-cols-6">
-        <div class="sprite">새소식</div>
+      <div class="news cols-6 sm-cols-8 lg-cols-6">
+        <div class="flex-items-center headline sprite sprite-news">새소식</div>
         <figure class="iframe-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/TM27TgZ4oEI?si=PzApfJzB2q1g7f10" title="원피스 에그헤드편" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/TM27TgZ4oEI?si=PzApfJzB2q1g7f10"
+            title="원피스 에그헤드편" frameborder="0" allowfullscreen></iframe>
         </figure>
       </div>
-      <div class="board gray cols-12 sm-cols-8 lg-cols-4">게시판</div>
-      <div class="favorite red cols-6 sm-cols-4 lg-cols-3">인기 사이트</div>
-      <div class="twitter olivegreen cols-6 sm-cols-12 lg-cols-5">트위터</div>
+      <div class="board cols-12 sm-cols-8 lg-cols-4">
+        <div class="flex-items-center headline sprite sprite-board">게시판</div>
+      </div>
+      <div class="favorite cols-6 sm-cols-4 lg-cols-3">
+        <div class="flex-items-center headline sprite sprite-favorite">인기사이트</div>
+      </div>
+      <div class="twitter cols-6 sm-cols-12 lg-cols-5">
+        <div class="flex-items-center headline sprite sprite-twitter">트위터</div>
+      </div>
     </main>
     <footer class="footer violet">footer</footer>
   </div>

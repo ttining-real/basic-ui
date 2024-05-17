@@ -1,0 +1,14 @@
+/* 로고 */
+.logo {
+  background-color: deepskyblue;
+  /* background-image: url(./../../images/webcafe-logo.png); */
+  background-image: image-set(
+    url(./../../images/webcafe-logo.png) 1x,
+    url(./../../images/webcafe-logo@2x.png) 2x
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20%;
+  /* height: 50px; */
+  aspect-ratio: 1/0.28921568627450983;
+}

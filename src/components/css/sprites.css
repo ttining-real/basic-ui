@@ -5,7 +5,7 @@
 /* 스프라이트 이미지 */
 .sprite {
   height: 60px;
-  background: yellow url(/images/sprite_main.png) no-repeat;
+  background: url(/images/sprite_main.png) no-repeat;
   padding-left: 64px;
 
   &.sprite-book {
@@ -36,4 +36,10 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+}
+
+
+.icon-search {
+  width: 100px;
+  height: 100px;
 }
