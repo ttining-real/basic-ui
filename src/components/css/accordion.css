@@ -1,0 +1,51 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+/* ! 임시 코드 */
+body {
+  margin: 50px;
+  background: #000;
+}
+
+.accordion {
+  details[open] svg {
+    rotate: 135deg;
+  }
+  details {
+    background: yellow;
+    padding: 0;
+    color: #f9f9f9;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background-color: #333;
+    summary {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      border-bottom: 2px solid #000;
+      background-color: #333;
+      &::marker {
+        content: "";
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    div {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem;
+      padding: 1rem;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
